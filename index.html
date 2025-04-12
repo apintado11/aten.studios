@@ -1,0 +1,35 @@
+<div class="app-container">
+  <div class="sidebar">
+    <h2>Image Effects</h2>
+    <input type="file" id="imageInput" accept="image/*" />
+
+    <label>Threshold: <span id="thresholdValue">128</span></label>
+    <input type="range" id="thresholdSlider" min="0" max="255" value="128" />
+
+    <label>Brightness: <span id="brightnessValue">0</span></label>
+    <input type="range" id="brightnessSlider" min="-100" max="100" value="0" />
+
+    <label>Contrast: <span id="contrastValue">0</span></label>
+    <input type="range" id="contrastSlider" min="-100" max="100" value="0" />
+
+    <label>
+      <input type="checkbox" id="grayscaleToggle" />
+      Grayscale
+    </label>
+
+    <label>File Type</label>
+    <select id="fileTypeSelect">
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+    </select>
+
+    <button onclick="applyAll()">Apply Effects</button>
+    <button onclick="resetImage()">Reset</button>
+    <button onclick="randomizeEffects()">🎲 Randomize</button>
+    <button onclick="downloadImage()">Download</button>
+  </div>
+
+  <div class="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+</div>
